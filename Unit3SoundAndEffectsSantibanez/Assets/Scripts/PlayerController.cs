@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     public bool gameOver = false;
+    public bool isFast = false;
+
+    public int jumpCounter = 0;
+    public int score = 0;
 
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
@@ -28,18 +32,30 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
 
         playerAudio = GetComponent<AudioSource>();
+        Debug.Log("Score: " + score.ToString());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
+        if (Input.GetKeyDown(KeyCode.Space) && !gameOver && jumpCounter < 2)
         {
             playerAudio.PlayOneShot(jumpSound, 1.0f);
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
+            jumpCounter ++;
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isFast = true;
+            playerAnim.speed = 4;
+        }
+        else
+        {
+            isFast = false;
+            playerAnim.speed = 1.5f;
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -47,8 +63,8 @@ public class PlayerController : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Ground"))
         {
-            isOnGround = true;
             dirtParticle.Play();
+            jumpCounter = 0;
         }
         else if(collision.gameObject.CompareTag("Obstacle"))
         {
@@ -59,6 +75,14 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetInteger("DeathType_int", 1);
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("score"))
+        {
+            score++;
+            Debug.Log("Score: " + score.ToString());
         }
     }
 }
