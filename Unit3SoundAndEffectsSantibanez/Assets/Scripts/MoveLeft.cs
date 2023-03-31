@@ -18,8 +18,8 @@ public class MoveLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(playerControllerScript.isFast = true)
+        
+        if(playerControllerScript.isFast == true)
         {
             speed = 80;
         }
@@ -27,7 +27,7 @@ public class MoveLeft : MonoBehaviour
         {
             speed = 30;
         }
-        */
+        
         if(playerControllerScript.gameOver == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);

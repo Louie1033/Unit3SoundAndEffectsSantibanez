@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public int jumpCounter = 0;
     public int score = 0;
+    public GameObject restartButton;
 
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
@@ -47,23 +49,27 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             jumpCounter ++;
         }
-        /*
+
         if (Input.GetKey(KeyCode.F))
         {
             isFast = true;
             playerAnim.speed = 4;
         }
-        else (isFast)
+        else
         {
             isFast = false;
             playerAnim.speed = 1.5f;
         }
-        */
+        if(gameOver == true)
+        {
+            restartButton.SetActive(true);
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
 
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Ground") && !gameOver)
         {
             dirtParticle.Play();
             jumpCounter = 0;
@@ -81,17 +87,17 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("score") && isFast = false)
+        if(other.gameObject.CompareTag("score") && !isFast)
         {
             score++;
             Debug.Log("Score: " + score.ToString());
         }
-        /*
-        if(other.gameObject.CompareTage("score") && isFast = true)
+        
+        if(other.gameObject.CompareTag("score") && isFast)
         {
             score += 2;
             Debug.Log("Score: " + score.ToString());
         }
-        */
+        
     }
 }
