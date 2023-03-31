@@ -47,16 +47,18 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             jumpCounter ++;
         }
+        /*
         if (Input.GetKeyDown(KeyCode.F))
         {
             isFast = true;
             playerAnim.speed = 4;
         }
-        else
+        if (Input.GetKeyup(KeyCode.F))
         {
             isFast = false;
             playerAnim.speed = 1.5f;
         }
+        */
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -79,10 +81,17 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("score"))
+        if(other.gameObject.CompareTag("score") && isFast = false)
         {
             score++;
             Debug.Log("Score: " + score.ToString());
         }
+        /*
+        if(other.gameObject.CompareTage("score") && isFast = true)
+        {
+            score += 2;
+            Debug.Log("Score: " + score.ToString());
+        }
+        */
     }
 }
