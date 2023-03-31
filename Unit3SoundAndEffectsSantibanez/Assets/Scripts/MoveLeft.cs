@@ -19,11 +19,11 @@ public class MoveLeft : MonoBehaviour
     void Update()
     {
         /*
-        if(input.GetKeyDown(KeyCode.F))
+        if(playerControllerScript.isFast = true)
         {
             speed = 80;
         }
-        if(input.GetKeyUp(KeyCode.F))
+        else
         {
             speed = 30;
         }
