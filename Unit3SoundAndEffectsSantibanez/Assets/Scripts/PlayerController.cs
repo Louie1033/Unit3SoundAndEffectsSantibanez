@@ -48,12 +48,12 @@ public class PlayerController : MonoBehaviour
             jumpCounter ++;
         }
         /*
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKey(KeyCode.F))
         {
             isFast = true;
             playerAnim.speed = 4;
         }
-        if (Input.GetKeyup(KeyCode.F))
+        else (isFast)
         {
             isFast = false;
             playerAnim.speed = 1.5f;
