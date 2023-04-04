@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 43
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 119
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 57
+  controlID: 96
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -498,7 +498,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 594
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -545,22 +545,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Challenge 3
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Challenge 3
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\Users\748085\Documents\Unity\GitHub\Unit3SoundAndEffectsSantibanez\Unit3SoundAndEffectsSantibanez
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e5f0000
-    m_LastClickedID: 24430
-    m_ExpandedIDs: 00000000645f000000ca9a3b
+    m_SelectedIDs: 665f0000
+    m_LastClickedID: 24422
+    m_ExpandedIDs: 00000000625f0000665f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -961,9 +961,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.193434, y: 6.6579227, z: -16.89111}
+    m_Target: {x: 1.6941696, y: 7.9416685, z: -4.5994987}
     speed: 2
-    m_Value: {x: 12.193434, y: 6.6579227, z: -16.89111}
+    m_Value: {x: 1.6941696, y: 7.9416685, z: -4.5994987}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1010,13 +1010,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10299881, y: -0.24590178, z: 0.026270533, w: 0.9634388}
+    m_Target: {x: 0.19065347, y: -0.04062436, z: 0.007887931, w: 0.9807596}
     speed: 2
-    m_Value: {x: 0.1029998, y: -0.24590413, z: 0.026270784, w: 0.96344805}
+    m_Value: {x: 0.18918678, y: -0.04063715, z: 0.007827184, w: 0.9810687}
   m_Size:
-    m_Target: 10
+    m_Target: 10.788239
     speed: 2
-    m_Value: 10
+    m_Value: 10.788239
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1074,7 +1074,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffff
+      m_ExpandedIDs: 9cb8ffff8cbbffff1cf9ffff32fbffffb85f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

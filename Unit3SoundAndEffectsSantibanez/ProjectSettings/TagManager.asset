@@ -10,6 +10,7 @@ TagManager:
   - Money
   - Bomb
   - score
+  - Sky
   layers:
   - Default
   - TransparentFX

@@ -8,9 +8,10 @@ public class PlayerControllerX : MonoBehaviour
     public bool isOnGround = false;
     public bool isHighEnough = false;
 
-    public float floatForce;
+    public float floatForce = 1;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
+    public MeshRenderer player;
 
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
@@ -38,9 +39,9 @@ public class PlayerControllerX : MonoBehaviour
     void Update()
     {
         // While space is pressed and player is low enough, float up
-        if (Input.GetKeyDown(KeyCode.Space) && !gameOver && !isHighEnough)
+        if (Input.GetKey(KeyCode.Space) && !gameOver && !isHighEnough)
         {
-            playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * floatForce);
         }
         if(transform.position.y >= 12)
         {
@@ -62,6 +63,7 @@ public class PlayerControllerX : MonoBehaviour
             gameOver = true;
             Debug.Log("Game Over!");
             Destroy(other.gameObject);
+            player.enabled = false;
         }
 
         // if player collides with money, fireworks
@@ -72,10 +74,15 @@ public class PlayerControllerX : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-        else if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag("Ground") && !gameOver)
         {
             playerAudio.PlayOneShot(bounceSound, 1.0f);
             playerRb.AddForce(Vector3.up * 15, ForceMode.Impulse);
+        }
+        if(other.gameObject.CompareTag("Sky"))
+        {
+            playerAudio.PlayOneShot(bounceSound, 1.0f);
+            playerRb.AddForce(Vector3.down * 10);
         }
     }
 
