@@ -60,10 +60,11 @@ public class PlayerController : MonoBehaviour
             isFast = false;
             playerAnim.speed = 1.5f;
         }
-        if(gameOver == true)
+        /*if(gameOver == true)
         {
             restartButton.SetActive(true);
         }
+        */
 
     }
     private void OnCollisionEnter(Collision collision)

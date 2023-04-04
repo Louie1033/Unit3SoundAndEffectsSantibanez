@@ -312,7 +312,7 @@ MonoBehaviour:
   - {fileID: 3594850402146571041, guid: cab8b5549a563f549b4ce79a736fba37, type: 3}
   - {fileID: 1816169023726399048, guid: 30b216d26a3b3ad45a9c22563dd3998c, type: 3}
   - {fileID: 6300927539630545447, guid: 380a2f03d5e5a014cb1075bd1340643c, type: 3}
-  repeatRate: 2
+  repeatRate: 6
 --- !u!4 &210446269
 Transform:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 606910ec401804eb09925f0d57909c04, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -842,7 +842,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -979,12 +979,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040357068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5b48eafaced54d49bb38ee0798887da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Prototype3
 --- !u!4 &1040357070
 Transform:
   m_ObjectHideFlags: 0
